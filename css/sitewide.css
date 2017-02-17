@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+.siteheader
+{
+  color:#093;	
+}
+
+.topspacer1
+{
+  padding-top:15px;	
+}
+
+.bottomspacer
+{
+  padding-bottom:15px;	
+}
+
+.footer
+{
+  border-top:1px solid #e1e1e1;
+  padding-top:5px;	
+}
+
+.controlright
+{
+text-align:right;	
+}
+
+.mycontainer
+{
+  margin:10px;	
+}
+
+.label-as-badge
+{
+  border-radius: 1em;	
+}
+
+.badge-bg-green
+{
+	background-color:#0C6;
+}
