@@ -61,7 +61,7 @@
                                 <ul class="dropdown-menu">
                                 	<li><a href="#"><small><span class="glyphicon glyphicon-user"></span> Profile</small></a></li>
                                     <li><a href="#"><small><span class="glyphicon glyphicon-camera"></span> Photo</small></a></li>
-                                    <li><a href="#"><small><span class="glyphicon glyphicon-off"></span> Sign Out</small></a></li>
+                                    <li><a href="/Shibboleth.sso/Logout"><small><span class="glyphicon glyphicon-off"></span> Sign Out</small></a></li>
                                 </ul>
                              </li>
                             <li>

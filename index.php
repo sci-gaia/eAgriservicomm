@@ -36,20 +36,22 @@
                 	<div class="col-xs-12 col-sm-12 col-md-12"><?php require("signin.php"); ?></div>
                 </div>
             	<div class="topspacer1">
-                     <form class="form" action="index.php" method="post">
+                     <!--form class="form" action="index.php" method="post"-->
+                     <!--form class="form" action="dashboard.php" method="get">
                      	<div class="form-group">
                         	<label for="userName">Email or Username</label>
-                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Email or Username" required>                            
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Email or Username" >                            
                         </div>
                         <div class="form-group">
                         	<label for="pwd">Password</label>
-                            <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password" required>                          
+                            <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password" >                          
                         
                         </div>
                         <div class="row">
                         	 <div class="col-xs-12 col-sm-12 col-md-3">
-                             	<input type="submit" name="signin" value="Sign In" class="btn btn-success">
-                             </div>
+                             	<input type="submit" name="signin" value="Sign In" class="btn btn-success"-->
+                             	<input type="submit" name="signin" value="Sign In" class="btn btn-success" onclick="window.location='/signin.php';">
+                             <!--/div>
                              <div class="col-xs-12 col-sm-12 col-md-9">
                              		<div class="checkbox">
                                     	<label>
@@ -71,7 +73,7 @@
                      </form>
                      <div class="topspacer1 bottomspacer">                     
                         New here? <a href="register/register.php">Register now</a>
-                     </div>
+                     </div-->
                 </div><!-- end of second column //-->
             </div> <!-- end of row //-->       
             
