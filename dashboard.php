@@ -1,5 +1,5 @@
 <?php
-  require("authenticateLogin.php");
+//  require("authenticateLogin.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

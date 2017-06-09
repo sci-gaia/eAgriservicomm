@@ -19,14 +19,16 @@
 	}*/
 
 	if (isset($_SERVER["REMOTE_USER"])) {
-		$username = $_SERVER["REMOTE_USER"];
+		//$username = $_SERVER["REMOTE_USER"];
+		$username = $_SERVER["cn"];
 		$name = getName();
 
-		print "<h1>Hi " . $username . "!!!</h1>";
-		print "<p>Your name is; " . $name . ".</p>";
+		//print "<h1>Hi " . $username . "!!!</h1>";
+		//print "<p>Your name is; " . $name . ".</p>";
 		
 		if(!IsNullOrEmptyString($name)) {
-                       	verify($username);
+                       	//verify($username);
+                       	verify($name);
 		}
 	}
 
@@ -97,7 +99,6 @@
 
 	function verify($uname)
         {
-                $pwdhash = sha1($pwd);
                 $sql = "select users_id,surname,firstname,othernames,city,state,country,user_roles_id
                                 from users where (email='".$uname."' or  username='".$uname."')";
                 $result = mysql_query($sql);
@@ -120,6 +121,7 @@
                         session_start();
                         $_SESSION['ag_signin']='';
                         session_destroy();
+			header("location:register/register.php?username=".$uname);
                 }
         }
 

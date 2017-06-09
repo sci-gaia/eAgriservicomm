@@ -5,6 +5,7 @@
 	require("../alertsLib.php");
 	
   if (isset($_POST['register'])){
+	 $username = trim(htmlspecialchars(addslashes($_POST['username'])));
 	 $surname = trim(htmlspecialchars(addslashes($_POST['surname'])));
 	 $firstname = trim(htmlspecialchars(addslashes($_POST['firstname'])));
 	 $othernames = trim(htmlspecialchars(addslashes($_POST['othernames'])));
@@ -19,12 +20,12 @@
 	 
 		 
 	
-	if ($surname=="" || $firstname=="" || $othernames=="" || $gender=="" || $city=="" || $country=="" 
+	/*if ($surname=="" || $firstname=="" || $othernames=="" || $gender=="" || $city=="" || $country=="" 
 		|| $phone=="" || $email=="" || $occupation=="" || $accountType=="")
 		{
 		  $errmsg = "Some important fields have been left unfilled.";	
 		}
-	 
+	*/ 
 	if ($errmsg=="")
 	{
 		   $sqlCheckEmailUse = "Select email from users where email='".$email."'";
@@ -49,13 +50,14 @@
  { 
 	  if ($errmsg=="")
 		 {
-			 $sqlInsert = "Insert into users(surname,firstname,othernames,gender,city,state,country,phone,
+			 $sqlInsert = "Insert into users(surname,firstname,othernames,gender,city,state,country,phone,username,
 			 email,occupation,user_roles_id,dateposted)values('$surname','$firstname','$othernames','$gender','$city',
-			 '$state','$country','$phone','$email','$occupation','$accountType',now())"; 
+			 '$state','$country','$phone','$username','$email','$occupation','$accountType',now())"; 
 			 $result = mysql_query($sqlInsert);
 			 if ($result)
 			 {
-				 successAlert("Registration has been successful. Check your email to activate and setup your account"); 
+				 //successAlert("Registration has been successful. Check your email to activate and setup your account"); 
+				 successAlert("Registration has been successful. Please <a href='https://agriservicomm.sci-gaia.eu'>Sign in</a> to complete the registration."); 
 			 }else{
 				 errorAlert("An error has occurred! Registration is aborted.");
 			 }
